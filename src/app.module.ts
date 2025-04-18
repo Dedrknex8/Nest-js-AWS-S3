@@ -7,7 +7,7 @@ import { UploadModule } from './upload/upload.module';
 import {ConfigModule} from '@nestjs/config'
 @Module({
   imports: [UploadModule,
-    ConfigModule.forRoot({
+    ConfigModule.forRoot({ //this is to use .env file everywhere inside the code
       isGlobal:true
     })],
   controllers: [AppController, UploadController],
